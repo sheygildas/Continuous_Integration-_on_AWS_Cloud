@@ -1,5 +1,5 @@
 
-# Project-03
+# Project-06
 ## :ledger: Index
 
 - [About The Project](#beginner-about-the-project)
@@ -47,7 +47,7 @@
 
 <br/>
 <div align="right">
-    <b><a href="#Project-03">↥ back to top</a></b>
+    <b><a href="#Project-06">↥ back to top</a></b>
 </div>
 <br/>
 
@@ -55,15 +55,15 @@
 
 <br/>
 <div align="right">
-    <b><a href="#Project-03">↥ back to top</a></b>
+    <b><a href="#Project-06">↥ back to top</a></b>
 </div>
 <br/>
 
 ## :key: Solution to the problem.
 
-<br/>
+<<br/>
 <div align="right">
-    <b><a href="#Project-03">↥ back to top</a></b>
+    <b><a href="#Project-06">↥ back to top</a></b>
 </div>
 <br/>
 
@@ -81,7 +81,7 @@
 
 <br/>
 <div align="right">
-    <b><a href="#Project-03">↥ back to top</a></b>
+    <b><a href="#Project-06">↥ back to top</a></b>
 </div>
 <br/>
 
@@ -92,7 +92,7 @@
 
 <br/>
 <div align="right">
-    <b><a href="#Project-03">↥ back to top</a></b>
+    <b><a href="#Project-06">↥ back to top</a></b>
 </div>
 <br/>
 
@@ -100,7 +100,7 @@
 
 <br/>
 <div align="right">
-    <b><a href="#Project-03">↥ back to top</a></b>
+    <b><a href="#Project-06">↥ back to top</a></b>
 </div>
 <br/>
 
@@ -108,46 +108,256 @@
 
 <br/>
 <div align="right">
-    <b><a href="#Project-03">↥ back to top</a></b>
+    <b><a href="#Project-06">↥ back to top</a></b>
+</div>
+<br/>
+### :package: Code Commit
+
+
+<br/>
+<div align="right">
+    <b><a href="#Project-06">↥ back to top</a></b>
 </div>
 <br/>
 
-### :package: Code Commit
 #### :package: Create CodeCommit repository
+
+<br/>
+<div align="right">
+    <b><a href="#Project-06">↥ back to top</a></b>
+</div>
+<br/>
+
 #### :closed_lock_with_key: Create IAM user with CodeCommit policy
+
+<br/>
+<div align="right">
+    <b><a href="#Project-06">↥ back to top</a></b>
+</div>
+<br/>
+
 #### :key: Generate SSH keys locally
+
+<br/>
+<div align="right">
+    <b><a href="#Project-06">↥ back to top</a></b>
+</div>
+<br/>
+
 #### :key: Exchange keys with IAM user
+
+<br/>
+<div align="right">
+    <b><a href="#Project-06">↥ back to top</a></b>
+</div>
+<br/>
+
 #### :package: Pull source code from github repository 
+
+<br/>
+<div align="right">
+    <b><a href="#Project-06">↥ back to top</a></b>
+</div>
+<br/>
+
 ### :package: Code Artifact
+
+<br/>
+<div align="right">
+    <b><a href="#Project-06">↥ back to top</a></b>
+</div>
+<br/>
+
 #### :closed_lock_with_key: Create an IAM user with code artifact access
+
+<br/>
+<div align="right">
+    <b><a href="#Project-06">↥ back to top</a></b>
+</div>
+<br/>
+
 #### :package: Install AWS CLI configure
+
+<br/>
+<div align="right">
+    <b><a href="#Project-06">↥ back to top</a></b>
+</div>
+<br/>
+
 #### :key: Export authentication token
+
+<br/>
+<div align="right">
+    <b><a href="#Project-06">↥ back to top</a></b>
+</div>
+<br/>
+
 #### :package: Update settings.xml file in source code 
+
+<br/>
+<div align="right">
+    <b><a href="#Project-06">↥ back to top</a></b>
+</div>
+<br/>
+
 #### :package: Update pom.xml file with repository details
+
+<br/>
+<div align="right">
+    <b><a href="#Project-06">↥ back to top</a></b>
+</div>
+<br/>
+
+
 ### :cloud: Sonar cloud 
+
+<br/>
+<div align="right">
+    <b><a href="#Project-06">↥ back to top</a></b>
+</div>
+<br/>
+
 #### :cloud: Create sonar cloud account
+
+<br/>
+<div align="right">
+    <b><a href="#Project-06">↥ back to top</a></b>
+</div>
+<br/>
+
 #### :key: Generate token
+
+<br/>
+<div align="right">
+    <b><a href="#Project-06">↥ back to top</a></b>
+</div>
+<br/>
+
 #### :key: Create SSM parameters with sonar details
+
+<br/>
+<div align="right">
+    <b><a href="#Project-06">↥ back to top</a></b>
+</div>
+<br/>
+
 #### :hammer_and_wrench: Create Build project
+
+<br/>
+<div align="right">
+    <b><a href="#Project-06">↥ back to top</a></b>
+</div>
+<br/>
+
 #### :key: Update CodeBuild role to access SSM parameter store
+
+<br/>
+<div align="right">
+    <b><a href="#Project-06">↥ back to top</a></b>
+</div>
+<br/>
+
 ### :email: Create notifications for SNS or slack
+
+<br/>
+<div align="right">
+    <b><a href="#Project-06">↥ back to top</a></b>
+</div>
+<br/>
+
 #### :hammer_and_wrench: Build Project
+
+<br/>
+<div align="right">
+    <b><a href="#Project-06">↥ back to top</a></b>
+</div>
+<br/>
+
 #### :package: Update pom.xml with artifact version with timestamp
+
+<br/>
+<div align="right">
+    <b><a href="#Project-06">↥ back to top</a></b>
+</div>
+<br/>
+
 #### :package: Create variables in SSM parameter sore
+
+<br/>
+<div align="right">
+    <b><a href="#Project-06">↥ back to top</a></b>
+</div>
+<br/>
+
 #### :hammer_and_wrench: Create build project
+
+<br/>
+<div align="right">
+    <b><a href="#Project-06">↥ back to top</a></b>
+</div>
+<br/>
+
 #### :key: Update CodeBuild role to access SSM parameter store 
+
+<br/>
+<div align="right">
+    <b><a href="#Project-06">↥ back to top</a></b>
+</div>
+<br/>
+
 ### :hole: Create Pipeline
+
+<br/>
+<div align="right">
+    <b><a href="#Project-06">↥ back to top</a></b>
+</div>
+<br/>
+
 #### :package: CodeCommit
+
+<br/>
+<div align="right">
+    <b><a href="#Project-06">↥ back to top</a></b>
+</div>
+<br/>
+
 #### :test_tube: Test code
+
+<br/>
+<div align="right">
+    <b><a href="#Project-06">↥ back to top</a></b>
+</div>
+<br/>
+
 #### :hammer_and_wrench: Build
+
+<br/>
+<div align="right">
+    <b><a href="#Project-06">↥ back to top</a></b>
+</div>
+<br/>
+
 #### :rocket: Deploy to s3 bucket
+
+<br/>
+<div align="right">
+    <b><a href="#Project-06">↥ back to top</a></b>
+</div>
+<br/>
+
 ### :test_tube: Test Pipeline
+
+<br/>
+<div align="right">
+    <b><a href="#Project-06">↥ back to top</a></b>
+</div>
+<br/>
 
 ## :page_facing_up: Resources
 
 <br/>
 <div align="right">
-    <b><a href="#Project-03">↥ back to top</a></b>
+    <b><a href="#Project-06">↥ back to top</a></b>
 </div>
 <br/>
 
@@ -157,7 +367,7 @@
 
 <br/>
 <div align="right">
-    <b><a href="#Project-03">↥ back to top</a></b>
+    <b><a href="#Project-06">↥ back to top</a></b>
 </div>
 <br/>
 

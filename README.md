@@ -29,7 +29,7 @@
     - [Update CodeBuild role to access SSM parameter store](#key-update-codebuild-role-to-access-ssm-parameter-store)
   - [Create notifications for SNS or slack](#email-create-notifications-for-sns-or-slack)
   - [Build Project](#hammer_and_wrench-build-project)
-    - [Update pom.xml with artifact version with timestamp](#package-update-pom.xml-with-artifact-version-with-timestamp)
+    - [Update pom.xml with artifact version with timestamp](#package-update-pomxml-with-artifact-version-with-timestamp)
     - [Create variables in SSM parameter sore](#package-create-variables-in-ssm-parameter-sore)
     - [Create build project](#hammer_and_wrench-create-build-project)
     - [Update CodeBuild role to access SSM parameter store ](#key-update-codebuild-role-to-access-ssm-parameter-store)

@@ -112,94 +112,36 @@
 </div>
 <br/>
 
-### :closed_lock_with_key: Create Key Pairs
-
-<br/>
-<div align="right">
-    <b><a href="#Project-03">↥ back to top</a></b>
-</div>
-<br/>
-
-### :lock: Create Security groups
-
-<br/>
-<div align="right">
-    <b><a href="#Project-03">↥ back to top</a></b>
-</div>
-<br/>
-
-### :bulb: Launch Instances with user data 
-
-<br/>
-<div align="right">
-    <b><a href="#Project-03">↥ back to top</a></b>
-</div>
-<br/>
-
-### :earth_africa: Update IP to name mapping in route 53
-
-<br/>
-<div align="right">
-    <b><a href="#Project-03">↥ back to top</a></b>
-</div>
-<br/>
-
-### :hammer_and_wrench: Build Application from source code
-
-<br/>
-<div align="right">
-    <b><a href="#Project-03">↥ back to top</a></b>
-</div>
-<br/>
-
-### :rocket: Upload to S3 bucket
-
-<br/>
-<div align="right">
-    <b><a href="#Project-03">↥ back to top</a></b>
-</div>
-<br/>
-
-### :package: Download artifact to Tomcat Ec2 Instance
-
-<br/>
-<div align="right">
-    <b><a href="#Project-03">↥ back to top</a></b>
-</div>
-<br/>
-
-### :lock: Setup ELB with HTTPS 
-
-<br/>
-<div align="right">
-    <b><a href="#Project-03">↥ back to top</a></b>
-</div>
-<br/>
-
-### :earth_africa: Map ELB Endpoint to website name in DNS
-
-<br/>
-<div align="right">
-    <b><a href="#Project-03">↥ back to top</a></b>
-</div>
-<br/>
-
-### :hammer_and_wrench: Build Autoscaling Group for Tomcat Instances
-
-<br/>
-<div align="right">
-    <b><a href="#Project-03">↥ back to top</a></b>
-</div>
-<br/>
-
-## :earth_africa: Verify from browser
-
-<br/>
-<div align="right">
-    <b><a href="#Project-03">↥ back to top</a></b>
-</div>
-<br/>
-
+### :package: Code Commit
+Create CodeCommit repository
+Create IAM user with CodeCommit policy
+Generate SSH keys locally
+Exchange keys with IAM user
+Pull source code from github repository 
+### :package: Code Artifact
+Create an IAM user with code artifact access
+Install AWS CLI, configure
+Export authentication token
+Update settings.xml file in source code 
+Update pom.xml file with repository details
+### :package: Sonar cloud 
+Create sonar cloud account
+Generate token
+Create SSM parameters with sonar details
+Create Build project
+Update CodeBuild role to access SSM parameter store
+### :package: Create notifications for SNS or slack
+Build Project
+Update pom.xml with artifact version with timestamp
+Create variables in SSM parameter sore
+Create build project
+Update CodeBuild role to access SSM parameter store 
+### :package: Create Pipeline
+CodeCommit
+Test code
+Build
+Deploy to s3 bucket
+### :package: Test Pipeline
 
 ## :page_facing_up: Resources
 

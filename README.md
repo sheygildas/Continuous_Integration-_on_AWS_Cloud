@@ -37,6 +37,7 @@
     - [CodeCommit](#package-codecommit)
     - [Test code](#package-test-code)
     - [Build](#package-build)
+    - [Deploy to s3 bucket](#rocket-deploy-to-s3-bucket)
   - [Test Pipeline](#package-test-pipeline)
 - [Resources](#page_facing_up-resources)
 - [Credit/Acknowledgment](#star2-creditacknowledgment)
@@ -113,33 +114,33 @@
 
 ### :package: Code Commit
 #### :package: Create CodeCommit repository
-#### :package: Create IAM user with CodeCommit policy
-#### :package: Generate SSH keys locally
-#### :package: Exchange keys with IAM user
+#### :closed_lock_with_key: Create IAM user with CodeCommit policy
+#### :key: Generate SSH keys locally
+#### :key: Exchange keys with IAM user
 #### :package: Pull source code from github repository 
 ### :package: Code Artifact
-#### :package: Create an IAM user with code artifact access
-#### :package: Install AWS CLI, configure
-#### :package: Export authentication token
+#### :closed_lock_with_key: Create an IAM user with code artifact access
+#### :package: Install AWS CLI configure
+#### :key: Export authentication token
 #### :package: Update settings.xml file in source code 
 #### :package: Update pom.xml file with repository details
-### :package: Sonar cloud 
-#### :package: Create sonar cloud account
-#### :package: Generate token
-#### :package: Create SSM parameters with sonar details
-#### :package: Create Build project
-#### :package: Update CodeBuild role to access SSM parameter store
-### :package: Create notifications for SNS or slack
-#### :package: Build Project
+### :cloud: Sonar cloud 
+#### :cloud: Create sonar cloud account
+#### :key: Generate token
+#### :key: Create SSM parameters with sonar details
+#### :hammer_and_wrench: Create Build project
+#### :key: Update CodeBuild role to access SSM parameter store
+### :email: Create notifications for SNS or slack
+#### :hammer_and_wrench: Build Project
 #### :package: Update pom.xml with artifact version with timestamp
 #### :package: Create variables in SSM parameter sore
-#### :package: Create build project
-#### :package: Update CodeBuild role to access SSM parameter store 
-### :package: Create Pipeline
+#### :hammer_and_wrench: Create build project
+#### :key: Update CodeBuild role to access SSM parameter store 
+### :hole: Create Pipeline
 #### :package: CodeCommit
-#### :package: Test code
-#### :package: Build
-#### :package: Deploy to s3 bucket
+#### :test_tube: Test code
+#### :hammer_and_wrench: Build
+#### :rocket: Deploy to s3 bucket
 ### :package: Test Pipeline
 
 ## :page_facing_up: Resources

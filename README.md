@@ -19,10 +19,10 @@
     - [Create an IAM user with code artifact access](#closed_lock_with_key-create-an-iam-user-with-code-artifact-access)
     - [Install AWS CLI configure](#package-install-aws-cli-configure)
     - [Export authentication token](#key-export-authentication-token)
-    - [Update settings.xml file in source code ](#package-update-settings.xml-file-in-source-code)
-    - [Update pom.xml file with repository details](#package-update-pom.xml-file-with-repository-details)
+    - [Update settings.xml file in source code ](#package-update-settings-xml-file-in-source-code)
+    - [Update pom.xml file with repository details](#package-update-pom-xml-file-with-repository-details)
   - [Sonar cloud ](#cloud-sonar-cloud)
-    - [Create sonar cloud account](#clod-create-sonar-cloud-account)
+    - [Create sonar cloud account](#cloud-create-sonar-cloud-account)
     - [Generate token](#key-generate-token)
     - [Create SSM parameters with sonar details](#key-create-ssm-parameters-with-sonar-details)
     - [Create Build project](#rocket-create-build-project)
@@ -141,7 +141,7 @@
 #### :test_tube: Test code
 #### :hammer_and_wrench: Build
 #### :rocket: Deploy to s3 bucket
-### :package: Test Pipeline
+### :test_tube: Test Pipeline
 
 ## :page_facing_up: Resources
 

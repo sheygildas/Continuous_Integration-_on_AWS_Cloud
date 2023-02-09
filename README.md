@@ -113,34 +113,34 @@
 <br/>
 
 ### :package: Code Commit
-Create CodeCommit repository
-Create IAM user with CodeCommit policy
-Generate SSH keys locally
-Exchange keys with IAM user
-Pull source code from github repository 
+#### :package: Create CodeCommit repository
+#### :package: Create IAM user with CodeCommit policy
+#### :package: Generate SSH keys locally
+#### :package: Exchange keys with IAM user
+#### :package: Pull source code from github repository 
 ### :package: Code Artifact
-Create an IAM user with code artifact access
-Install AWS CLI, configure
-Export authentication token
-Update settings.xml file in source code 
-Update pom.xml file with repository details
+#### :package: Create an IAM user with code artifact access
+#### :package: Install AWS CLI, configure
+#### :package: Export authentication token
+#### :package: Update settings.xml file in source code 
+#### :package: Update pom.xml file with repository details
 ### :package: Sonar cloud 
-Create sonar cloud account
-Generate token
-Create SSM parameters with sonar details
-Create Build project
-Update CodeBuild role to access SSM parameter store
+#### :package: Create sonar cloud account
+#### :package: Generate token
+#### :package: Create SSM parameters with sonar details
+#### :package: Create Build project
+#### :package: Update CodeBuild role to access SSM parameter store
 ### :package: Create notifications for SNS or slack
-Build Project
-Update pom.xml with artifact version with timestamp
-Create variables in SSM parameter sore
-Create build project
-Update CodeBuild role to access SSM parameter store 
+#### :package: Build Project
+#### :package: Update pom.xml with artifact version with timestamp
+#### :package: Create variables in SSM parameter sore
+#### :package: Create build project
+#### :package: Update CodeBuild role to access SSM parameter store 
 ### :package: Create Pipeline
-CodeCommit
-Test code
-Build
-Deploy to s3 bucket
+#### :package: CodeCommit
+#### :package: Test code
+#### :package: Build
+#### :package: Deploy to s3 bucket
 ### :package: Test Pipeline
 
 ## :page_facing_up: Resources

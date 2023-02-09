@@ -17,7 +17,7 @@
   - [Pull source code from github repository ](#package-pull-source-code-from-github-repository)
   - [Code Artifacte](#package-code-artifact)
   - [Create an IAM user with code artifact access](#package-create-an-iam-user-with-code-artifact-access)
-  - [Install AWS CLI configure](#package-install-aws-cli,-configure)
+  - [Install AWS CLI configure](#package-install-aws-cli-configure)
   - [Export authentication token](#package-export-authentication-token)
   - [Update settings.xml file in source code ](#package-update-settings.xml-file-in-source-code)
   - [Update pom.xml file with repository details](#package-update-pom.xml-file-with-repository-details)

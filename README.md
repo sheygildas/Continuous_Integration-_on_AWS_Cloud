@@ -68,16 +68,14 @@
 <br/>
 
 ## :hammer_and_wrench: Tools
-- A tool
-- B tool
+- visual studio code
+- AWS Account
+- AWS CLI
+- Maven
+- JDK8 
+- Sonar Cloud Account
+- Git
 
-| Name | Description |
-| --- | --- |
-| [`@toast-ui/editor-plugin-chart`](https://github.com/nhn/tui.editor/tree/master/plugins/chart) | Plugin to render chart |
-| [`@toast-ui/editor-plugin-code-syntax-highlight`](https://github.com/nhn/tui.editor/tree/master/plugins/code-syntax-highlight) | Plugin to highlight code syntax |
-| [`@toast-ui/editor-plugin-color-syntax`](https://github.com/nhn/tui.editor/tree/master/plugins/color-syntax) | Plugin to color editing text |
-| [`@toast-ui/editor-plugin-table-merged-cell`](https://github.com/nhn/tui.editor/tree/master/plugins/table-merged-cell) | Plugin to merge table columns |
-| [`@toast-ui/editor-plugin-uml`](https://github.com/nhn/tui.editor/tree/master/plugins/uml) | Plugin to render UML 
 
 <br/>
 <div align="right">
@@ -106,6 +104,7 @@
 
 ### :key: Login to AWS Account
 
+- Login into your AWS acount using the management console.
 <br/>
 <div align="right">
     <b><a href="#Project-06">↥ back to top</a></b>
@@ -113,6 +112,7 @@
 <br/>
 ### :package: Code Commit
 
+- While signin in your AWS account, select `us-east-1` region aand search for CodeCommit service. 
 
 <br/>
 <div align="right">
@@ -122,6 +122,16 @@
 
 #### :package: Create CodeCommit repository
 
+- Create CodeComit repository with the following name.
+
+ ```sh
+Name: vprofile-code-repo
+   ```
+
+- Follow the steps in the image below to configure you CodeComit reository so that you can connect to it through SSH.
+
+![Project Image](project-image-url)
+
 <br/>
 <div align="right">
     <b><a href="#Project-06">↥ back to top</a></b>
@@ -129,6 +139,16 @@
 <br/>
 
 #### :closed_lock_with_key: Create IAM user with CodeCommit policy
+
+- Create an IAM user through console with CodeCommit access. We will create a policy for CodeCommit and allow full access only for `vprofile-code-repo`.
+- Give the IAM user the following name.
+
+```sh
+Name: vprofile-code-admin-repo-fullaccess
+
+   ```
+
+![Project Image](project-image-url)
 
 <br/>
 <div align="right">
@@ -138,6 +158,10 @@
 
 #### :key: Generate SSH keys locally
 
+-  Generate SSH keys locally using Git.
+
+![Project Image](project-image-url)
+
 <br/>
 <div align="right">
     <b><a href="#Project-06">↥ back to top</a></b>
@@ -145,6 +169,20 @@
 <br/>
 
 #### :key: Exchange keys with IAM user
+- Coppy the public SSH key that you generated Locally and upload it to your AM role Security credentials on AWS.
+
+![Project Image](project-image-url)
+
+
+Next, create a config file locally using Git with the folowing details. SSH will use the config file to connect with CodeComit repo on AWS.
+
+```sh
+Host git-codecommit.us-east-1.amazonaws.com
+    User <SSH_Key_ID_from IAM_user>
+    IdentityFile ~/.ssh/vpro-codecommit_rsa
+
+   ```
+
 
 <br/>
 <div align="right">

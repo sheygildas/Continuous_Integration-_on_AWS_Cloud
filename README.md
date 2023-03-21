@@ -363,7 +363,7 @@ repository url: <replace it with your aws repo url found in the code artifact co
 Organization: freedomthinker-projects
 Project key: vprofile-repo
 ```
-<br/
+<br/>
 <div align="right">
     <b><a href="#Project-06">↥ back to top</a></b>
 </div>

@@ -606,7 +606,7 @@ Now, under your vprofile-CI-pipeline click on `release changes` and watch the pi
 #### :rocket: Deploy to s3 bucket
 
 - The artifact is automatically deploy to S3 when the build job is done executing. 
-- 
+
 <br/>
 <div align="right">
     <b><a href="#Project-06">↥ back to top</a></b>

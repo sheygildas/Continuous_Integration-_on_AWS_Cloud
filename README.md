@@ -433,13 +433,6 @@ StreamName: sonar-build-job
 </div>
 <br/>
 
-### :email: Create notifications for SNS or slack
-
-<br/>
-<div align="right">
-    <b><a href="#Project-06">↥ back to top</a></b>
-</div>
-<br/>
 
 #### :hammer_and_wrench: Build Project
 - Under `vprofile Build` job, got to `start Build`
@@ -528,7 +521,74 @@ StreamName: buildjob
 </div>
 <br/>
 
+
+### :email: Create notifications for SNS or slack
+- On you AWS console reach for SNS.
+- Create an SNS topic from SNS service and subscribe to topic with email.
+
+
+```sh
+Topic Name: vprofile-pipeline-notification
+Subscription: email
+Endpoint: <your email address>
+```
+- Go to your email inbox and confirm the subcription 
+
+<br/>
+<div align="right">
+    <b><a href="#Project-06">↥ back to top</a></b>
+</div>
+<br/> 
+
+
 ### :hole: Create Pipeline
+- Create CodePipeline with the following details
+
+```sh
+Name: vprofile-CI-Pipeline
+SourceProvider: Codecommit
+Respository name : vprofile-code-repo
+branch: ci-aws
+Change detection options: CloudWatch events
+Build Provider: CodeBuild
+ProjectName: vprofile-Build-Aetifact
+BuildType: single build
+Deploy provider: Amazon S3
+Bucket name: vprofile98-build-artifact
+object name: pipeline-artifact
+``` 
+- Under your vprofile-CI-Pipeline go to `edit`->`add stage` and add Test stages to your pipeline
+
+```sh
+Name: Test
+Action Name: Snar-Code-Annalysis 
+Action Provider: CodeBuild
+Input Acrtifact: SourceArtifact
+Project Name: vprofile-build
+Build type: Single build.
+``` 
+
+- Under your vprofile-CI-Pipeline go to `edit`->`add stage` and add Deploy stages to your pipeline
+
+
+```sh
+Name: Deploy
+Action Name: Deploy-To-S3 
+Action Provider: Amazon S3 
+Input Acrtifact: BuildArtifact
+Create an S3 bucket and a folder to store our deploy artifacts
+Bucket: <give the s3 bucket name you created>
+S3 bucket key <give the name of the folder you created in S3>
+Select extract file before deploy
+``` 
+
+
+- Go to `settings`->`notification` under Pipeline and create a notification rule 
+
+Now, under your vprofile-CI-pipeline click on `release changes` and watch the pipeline execute 
+
+![Project Image](project-image-url)
+
 
 <br/>
 <div align="right">

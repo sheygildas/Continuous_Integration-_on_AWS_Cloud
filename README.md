@@ -35,10 +35,7 @@
     - [Update CodeBuild role to access SSM parameter store ](#key-update-codebuild-role-to-access-ssm-parameter-store)
   - [Create Pipeline](#package-create-pipeline)
     - [CodeCommit](#package-codecommit)
-    - [Test code](#test_tube-test-code)
-    - [Build](#hammer_and_wrench-build)
     - [Deploy to s3 bucket](#rocket-deploy-to-s3-bucket)
-  - [Test Pipeline](#test_tube-test-pipeline)
 - [Resources](#page_facing_up-resources)
 - [Credit/Acknowledgment](#star2-creditacknowledgment)
 
@@ -598,21 +595,7 @@ Now, under your vprofile-CI-pipeline click on `release changes` and watch the pi
 
 #### :package: CodeCommit
 
-<br/>
-<div align="right">
-    <b><a href="#Project-06">↥ back to top</a></b>
-</div>
-<br/>
-
-#### :test_tube: Test code
-
-<br/>
-<div align="right">
-    <b><a href="#Project-06">↥ back to top</a></b>
-</div>
-<br/>
-
-#### :hammer_and_wrench: Build
+- Make some code changes using your IDE and push it to your repo, go to AWS and watch the pipeline auto execute.
 
 <br/>
 <div align="right">
@@ -622,14 +605,8 @@ Now, under your vprofile-CI-pipeline click on `release changes` and watch the pi
 
 #### :rocket: Deploy to s3 bucket
 
-<br/>
-<div align="right">
-    <b><a href="#Project-06">↥ back to top</a></b>
-</div>
-<br/>
-
-### :test_tube: Test Pipeline
-
+- The artifact is automatically deploy to S3 when the build job is done executing. 
+- 
 <br/>
 <div align="right">
     <b><a href="#Project-06">↥ back to top</a></b>

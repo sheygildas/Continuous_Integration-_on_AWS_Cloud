@@ -359,19 +359,17 @@ repository url: <replace it with your aws repo url found in the code artifact co
 
 - Create a project, got to ->` Analyze Project` -> `create project manually`. 
 
-
-
 ```sh
 Organization: freedomthinker-projects
 Project key: vprofile-repo
 ```
-
-
 <br/
 <div align="right">
     <b><a href="#Project-06">↥ back to top</a></b>
 </div>
 <br/>
+
+
 
 #### :key: Create SSM parameters with sonar details
 - Login to your AWS console and search for System Manager.

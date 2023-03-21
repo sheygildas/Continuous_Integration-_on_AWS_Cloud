@@ -301,6 +301,16 @@ export CODEARTIFACT_AUTH_TOKEN=`aws codeartifact get-authorization-token --domai
 
 #### :package: Update settings.xml file in source code 
 
+- Update pom.xml and settings.xml with correct urls as suggested in instruction then push files to codeCommit.
+
+- On your local machine, update the setting.xml file in our `vprofile-project` repository. change the following.
+
+```sh
+repository url: <replace it with your aws repo url found in the code artifact connection instruction>
+domain name: <change it to your own domain name>
+url below the domain name: <put a forward slash (/) at the end of the url>
+   ```
+
 <br/>
 <div align="right">
     <b><a href="#Project-06">↥ back to top</a></b>
@@ -308,6 +318,14 @@ export CODEARTIFACT_AUTH_TOKEN=`aws codeartifact get-authorization-token --domai
 <br/>
 
 #### :package: Update pom.xml file with repository details
+
+- Update pom.xml and pom.xml file with correct urls as suggested in instruction then push files to codeCommit.
+
+- On your local machine, update the pom.xml file in our `vprofile-project` repository. change the following.
+
+```sh
+repository url: <replace it with your aws repo url found in the code artifact connection instruction>
+   ```
 
 <br/>
 <div align="right">

@@ -335,6 +335,8 @@ repository url: <replace it with your aws repo url found in the code artifact co
 
 
 ### :cloud: Sonar cloud 
+- Set up a code analysis job using the sonar cloud. Folow the following steps to accomplish this task.
+
 
 <br/>
 <div align="right">
@@ -344,6 +346,7 @@ repository url: <replace it with your aws repo url found in the code artifact co
 
 #### :cloud: Create sonar cloud account
 
+-  Go to https://www.sonarsource.com/products/sonarcloud/ and create an account if you have not done that yet.
 <br/>
 <div align="right">
     <b><a href="#Project-06">↥ back to top</a></b>
@@ -352,13 +355,37 @@ repository url: <replace it with your aws repo url found in the code artifact co
 
 #### :key: Generate token
 
-<br/>
+-  Sign in and go to -> `My Account` -> `Security`. Generate token name as `vprofile-sonartoken`. save the token somewhere on your machine.
+
+
+![Project Image](project-image-url)
+
+- Create a project, got to ->` Analyze Project` -> `create project manually`. 
+
+
+```sh
+ORGANIZATION          freedomthinker-projects	
+HOST                  https://sonarcloud.io
+PROJECT               vprofile-repo
+SONARTOKEN            SecureString (put your sonarcloud token)
+CODE ARTIFACT TOKEN   SecureString (put your token generated from aws cli)
+```
+
+
+<br/
 <div align="right">
     <b><a href="#Project-06">↥ back to top</a></b>
 </div>
 <br/>
 
 #### :key: Create SSM parameters with sonar details
+- Login to your AWS console and search for System Manager.
+- Create parameters with the variables below which with obtain from sonar cloud.
+
+```sh
+Organization: freedomthinker-projects
+Project key: vprofile-repo
+```
 
 <br/>
 <div align="right">

@@ -174,7 +174,7 @@ Name: vprofile-code-admin-repo-fullaccess
 ![Project Image](project-image-url)
 
 
-Next, create a config file locally using Git with the folowing details. SSH will use the config file to connect with CodeComit repo on AWS.
+- Next, create a config file locally using Git with the folowing details. SSH will use the config file to connect with CodeComit repo on AWS.
 
 ```sh
 Host git-codecommit.us-east-1.amazonaws.com
@@ -182,8 +182,14 @@ Host git-codecommit.us-east-1.amazonaws.com
     IdentityFile ~/.ssh/vpro-codecommit_rsa
 
    ```
+- Now, let's test our SSH connection to CodeCommit
 
 
+```sh
+ssh git-codecommit.us-east-1.amazonaws.com
+
+   ```
+   
 <br/>
 <div align="right">
     <b><a href="#Project-06">↥ back to top</a></b>
@@ -191,6 +197,28 @@ Host git-codecommit.us-east-1.amazonaws.com
 <br/>
 
 #### :package: Pull source code from github repository 
+
+- Clone the CodeComit repository to your local machine and take note of the location.
+- Transition the `vprofile-project` repository from github to the CodeComit repository on AWS.
+- Checkout the `vprofile-project` repository from github at this location [src/main/resources](https://github.com/sheygildas/Local_App_Setup/tree/local-setup/src/main/resources) directory.
+- Run the following commands to do the transition.
+
+```sh
+git checkout master
+git branch -a | grep -v HEAD | cur -d'/' -f3 | grep -v master > /tmp/branches
+for i in `cat  /tmp/branches`; do git checkout $i; done
+git fetch --tags
+git remote rm origin
+git remote add origin ssh://git-codecommit.us-east-1.amazonaws.com/v1/repos/vprofile-code-repo
+cat .git/config
+git push origin --all
+git push --tags
+
+   ```
+   
+- Now, the repo is ready on CodeCommit with all branches.
+
+![Project Image](project-image-url)
 
 <br/>
 <div align="right">
@@ -200,6 +228,24 @@ Host git-codecommit.us-east-1.amazonaws.com
 
 ### :package: Code Artifact
 
+- While signin in your AWS account on the console, select `us-east-1` region aand search for Code Artifact service. 
+- Create CodeArtifact repository with the following details, this CodeArtifact repository will be used by our Maven Build job.
+
+
+ 
+```sh
+Name: vprofile-maven-repo
+Public upstraem Repo: maven-central-store
+This AWS account
+Domain name: visualpath
+
+   ```
+ 
+ - Follow the connection instructions given in CodeArtifact to create a connection with the `maven-central-repo`.
+
+![Project Image](project-image-url)
+ 
+
 <br/>
 <div align="right">
     <b><a href="#Project-06">↥ back to top</a></b>
@@ -208,6 +254,13 @@ Host git-codecommit.us-east-1.amazonaws.com
 
 #### :closed_lock_with_key: Create an IAM user with code artifact access
 
+- Create an IAM user for CodeArtifact and configure aws CLI with its credentials of the IAM user. Also give the user programmatic access.
+
+```sh
+IAM name: vprofile-code-artifact-admin
+IAM policy: AWSCodeArtifactAdminAccess
+
+   ```
 <br/>
 <div align="right">
     <b><a href="#Project-06">↥ back to top</a></b>
@@ -215,6 +268,16 @@ Host git-codecommit.us-east-1.amazonaws.com
 <br/>
 
 #### :package: Install AWS CLI configure
+
+- Configure aws CLI with its IAM credentials.Install AWS CLI if you don't have it installed 
+
+```sh
+aws configure <provide your iam user credentials>
+AWS Access key ID <>
+AWS Secret key ID<>
+Default region name <us-east-1>
+
+   ```
 
 <br/>
 <div align="right">
@@ -224,6 +287,12 @@ Host git-codecommit.us-east-1.amazonaws.com
 
 #### :key: Export authentication token
 
+- Run command to get authentication token as in the Code Artifact instructions. 
+
+```sh
+export CODEARTIFACT_AUTH_TOKEN=`aws codeartifact get-authorization-token --domain visualpath --domain-owner 392530415763 --region us-east-1 --query authorizationToken --output text`
+
+   ``` 
 <br/>
 <div align="right">
     <b><a href="#Project-06">↥ back to top</a></b>

@@ -363,12 +363,10 @@ repository url: <replace it with your aws repo url found in the code artifact co
 - Create a project, got to ->` Analyze Project` -> `create project manually`. 
 
 
+
 ```sh
-ORGANIZATION          freedomthinker-projects	
-HOST                  https://sonarcloud.io
-PROJECT               vprofile-repo
-SONARTOKEN            SecureString (put your sonarcloud token)
-CODE ARTIFACT TOKEN   SecureString (put your token generated from aws cli)
+Organization: freedomthinker-projects
+Project key: vprofile-repo
 ```
 
 
@@ -382,9 +380,12 @@ CODE ARTIFACT TOKEN   SecureString (put your token generated from aws cli)
 - Login to your AWS console and search for System Manager.
 - Create parameters with the variables below which with obtain from sonar cloud.
 
+
 ```sh
-Organization: freedomthinker-projects
-Project key: vprofile-repo
+ORGANIZATION          freedomthinker-projects	
+HOST                  https://sonarcloud.io
+PROJECT               vprofile-repo
+SONARTOKEN            SecureString (put your sonarcloud token)
 ```
 
 <br/>
@@ -395,6 +396,23 @@ Project key: vprofile-repo
 
 #### :hammer_and_wrench: Create Build project
 
+- On your AWS console bsearch for CodeBuild.
+- Create Build Project with the following details.
+
+```sh
+ProjectName: Vprofile-Build
+Source: CodeCommit
+Branch: ci-aws
+Environment: Ubuntu
+runtime: standard:5.0
+New service role: auto generated
+Insert build commands: Go to the folder aws-files/sonar_buildspec.yml from the source code you clone and copy the content 
+(Update sonar_buildspec.yml file parameter store sections with the exact names we have given in SSM Parameter store)
+CloudWatch Logs-> GroupName: vprofile-nvir-buildlogs
+StreamName: sonar-build-job
+```
+
+ 
 <br/>
 <div align="right">
     <b><a href="#Project-06">↥ back to top</a></b>
@@ -402,7 +420,13 @@ Project key: vprofile-repo
 <br/>
 
 #### :key: Update CodeBuild role to access SSM parameter store
+- Under `vprofile Build` job, got to `edit`->`Environment` copy the role name 
+- Go to IAM service and find the role you copied and edit the role by attaching the system manager policy to it.
 
+
+![Project Image](project-image-url)
+ 
+ 
 <br/>
 <div align="right">
     <b><a href="#Project-06">↥ back to top</a></b>
@@ -418,6 +442,15 @@ Project key: vprofile-repo
 <br/>
 
 #### :hammer_and_wrench: Build Project
+- Under `vprofile Build` job, got to `start Build`
+
+![Project Image](project-image-url)
+
+- Go to SonarCloud and checkout the overview of the project.
+
+![Project Image](project-image-url)
+ 
+
 
 <br/>
 <div align="right">
@@ -427,6 +460,7 @@ Project key: vprofile-repo
 
 #### :package: Update pom.xml with artifact version with timestamp
 
+- Update pom.xml and pom.xml file with correct urls as suggested in instruction then push files to codeCommit.
 <br/>
 <div align="right">
     <b><a href="#Project-06">↥ back to top</a></b>
@@ -434,6 +468,14 @@ Project key: vprofile-repo
 <br/>
 
 #### :package: Create variables in SSM parameter sore
+
+- Login to your AWS console and search for System Manager.
+- Add parameter with the variables below which with obtain from aws cli.
+
+
+```sh
+CODE ARTIFACT TOKEN: SecureString (put your token generated from aws cli)
+```
 
 <br/>
 <div align="right">
@@ -443,6 +485,23 @@ Project key: vprofile-repo
 
 #### :hammer_and_wrench: Create build project
 
+- Let create another job that will build our artifact.
+
+- On your AWS Console, go to `CodeBuild` -> `Create Build Project`.
+
+```sh
+ProjectName: Vprofile-Build-Artifact
+Source: CodeCommit
+Branch: ci-aws
+Environment: Ubuntu
+runtime: standard:5.0
+New service role: auto generated
+Insert build commands: Go to the folder aws-files/sonar_buildspec.yml from the source code you clone and copy the content 
+(Update sonar_buildspec.yml file parameter store sections with the exact names we have given in SSM Parameter store)
+CloudWatch Logs-> GroupName: vprofile-nvir-buildlogs
+StreamName: buildjob
+```
+
 <br/>
 <div align="right">
     <b><a href="#Project-06">↥ back to top</a></b>
@@ -450,6 +509,18 @@ Project key: vprofile-repo
 <br/>
 
 #### :key: Update CodeBuild role to access SSM parameter store 
+
+
+- Under `vprofile Build` job, got to `edit`->`Environment` copy the role name 
+- Go to IAM service and find the role you copied and edit the role by attaching the system manager policy to it.
+
+
+![Project Image](project-image-url)
+ 
+- Under `vprofile Build` job, got to `start Build`
+
+![Project Image](project-image-url)
+
 
 <br/>
 <div align="right">

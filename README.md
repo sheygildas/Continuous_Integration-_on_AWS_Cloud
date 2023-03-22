@@ -121,21 +121,13 @@
 
 - Create CodeComit repository with the following name.
 
- ```sh
-Name: vprofile-app
-Platform: Tomcat
-Application code: Sample code
-Click create.
 
-Capacity: LoadBalanced
-Min: 2
-Max: 4
-EC2 key pair: ci-vprofile-key 
-Tags: 
-Name:Project
-Value: vprofile
-click create app
-```
+
+
+ ```sh
+Name: vprofile-code-repo
+   ```
+   
 
 - Follow the steps in the image below to configure you CodeComit reository so that you can connect to it through SSH.
 
